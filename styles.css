@@ -67,7 +67,8 @@ header {
     url('Halloween ghost.png');
   backdrop-filter: blur(3rem);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
 }
 
@@ -195,4 +196,21 @@ button:hover {
     0 0 5rem var(--clr-accent), 0 0 20rem var(--clr-accent);
   color: var(--clr-neutral);
   background: var(--clr-accent);
+}
+
+@media screen and (max-width: 40em) {
+  nav {
+    position: static;
+  }
+  .nav__bar {
+    visibility: hidden;
+  }
+
+  .nav__container {
+    flex-direction: column-reverse;
+  }
+  .logo {
+    flex: 1;
+    font-size: calc(100% * 2);
+  }
 }
